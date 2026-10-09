@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Noor — DIFC, Dubai</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="preloader__inner">
+      <span class="preloader__wordmark">NOOR</span>
+      <span class="preloader__location">DIFC, Dubai</span>
+      <div class="preloader__bar"><div class="preloader__fill"></div></div>
+    </div>
+  </div>
+
+  <!-- Grain overlay -->
+  <canvas id="grain"></canvas>
+
+  <!-- Time display — fixed -->
+  <div id="time-display">
+    <span class="time__hours">19</span><span class="time__colon">:</span><span class="time__minutes">30</span>
+  </div>
+
+  <!-- Main scroll container -->
+  <main id="scroll-wrap">
+
+    <!-- S1: The Approach — 7:30pm -->
+    <section class="section section--approach" data-time="19:30" data-temp="warm">
+      <div class="section__content">
+        <p class="text--whisper">Gate Village.</p>
+        <p class="text--whisper text--delay">The vault door is open.</p>
+      </div>
+    </section>
+
+    <!-- S2: The Room — 7:45pm -->
+    <section class="section section--room" data-time="19:45" data-temp="warm">
+      <div class="section__image-wrap">
+        <img src="/assets/atmosphere-01.png" alt="" class="section__image breathing" loading="lazy">
+      </div>
+      <div class="section__content section__content--overlay">
+        <p class="text--material">Raw concrete.</p>
+        <p class="text--material">Black granite.</p>
+        <p class="text--material">One candle.</p>
+      </div>
+    </section>
+
+    <!-- S3: The First Course — 8:00pm -->
+    <section class="section section--surrender" data-time="20:00" data-temp="warm">
+      <div class="section__content section__content--full">
+        <h2 class="text--manifesto">
+          <span class="word">There</span>
+          <span class="word">is</span>
+          <span class="word">no</span>
+          <span class="word"><em>menu.</em></span>
+        </h2>
+        <p class="text--sub">The kitchen decides.</p>
+      </div>
+    </section>
+
+    <!-- S4: The Shift — 8:47pm (THE BRAVE DECISION) -->
+    <section class="section section--shift" data-time="20:47" data-temp="shift">
+      <div class="section__content section__content--full">
+        <p class="text--breath">The light overhead</p>
+        <p class="text--breath">moves from <em>gold</em> to <em class="rose">rose.</em></p>
+      </div>
+    </section>
+
+    <!-- S5: The Craft — 9:15pm -->
+    <section class="section section--craft" data-time="21:15" data-temp="cool">
+      <div class="section__image-wrap">
+        <img src="/assets/atmosphere-02.png" alt="" class="section__image breathing" loading="lazy">
+      </div>
+      <div class="section__content section__content--overlay">
+        <p class="text--ingredient">Dried lime from Ras Al Khaimah.</p>
+        <p class="text--ingredient">Saffron harvested at dawn.</p>
+        <p class="text--ingredient">Camel milk from Al Ain.</p>
+      </div>
+    </section>
+
+    <!-- S6: The Silence — 10:30pm -->
+    <section class="section section--silence" data-time="22:30" data-temp="warm-return">
+      <div class="section__content section__content--full">
+        <p class="text--tea">Tea.</p>
+      </div>
+    </section>
+
+    <!-- S7: The Departure — 11:15pm -->
+    <section class="section section--departure" data-time="23:15" data-temp="warm">
+      <div class="section__content section__content--full section__content--footer">
+        <span class="footer__wordmark">N<span class="wt-heavy">OOR</span></span>
+        <span class="footer__location">DIFC, Dubai</span>
+        <a href="mailto:reserve@noor.ae" class="footer__reserve">reserve@noor.ae</a>
+      </div>
+    </section>
+
+  </main>
+
+  <script type="module" src="/main.js"></script>
+</body>
+</html>
