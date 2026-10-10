@@ -228,8 +228,7 @@ body {
   font-style: italic;
   line-height: 2.2;
   letter-spacing: 0.02em;
-  opacity: 0;
-  transform: translateY(40px);
+  /* P55 clip-path reveal handles visibility via overflow:hidden masking — no opacity needed */
 }
 .text--delay { }
 
@@ -285,8 +284,7 @@ body {
 }
 .text--manifesto .word {
   display: inline-block;
-  clip-path: inset(0 0 100% 0);
-  transform: translateY(60px);
+  /* P55 animateReveal handles clip masking via overflow:hidden wrapper */
 }
 .text--manifesto em {
   font-style: italic;
