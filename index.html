@@ -6,91 +6,132 @@
   <title>Noor — DIFC, Dubai</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
 </head>
-<body data-grain>
+<body>
 
-  <!-- P30 cursor — no HTML needed, canvas created by JS -->
-
-  <!-- Preloader -->
-  <div id="preloader">
-    <div class="preloader__inner">
-      <span class="preloader__wordmark">NOOR</span>
-      <span class="preloader__sub">An evening in twelve courses</span>
-      <div class="preloader__bar"><div class="preloader__fill"></div></div>
+  <!-- HERO: Full-bleed atmosphere photo + massive overlapping wordmark -->
+  <section class="hero">
+    <div class="hero__media">
+      <img src="/assets/room-01.png" alt="" class="hero__img" data-breathe data-breathe-duration="14" data-breathe-scale="1.04">
     </div>
-  </div>
-
-  <!-- Time display (persistent) -->
-  <div id="time-display" aria-hidden="true">
-    <span class="time__hours">19</span><span class="time__colon">:</span><span class="time__minutes">30</span>
-  </div>
-
-  <!-- S1: THE APPROACH — 19:30 -->
-  <section class="s s--approach">
-    <div class="s__content s__content--left">
-      <p class="approach__line" data-word-reveal="clip">Gate Village.</p>
-      <p class="approach__line approach__line--delay" data-word-reveal="clip">The vault door is open.</p>
+    <div class="hero__gradient"></div>
+    <nav class="hero__nav">
+      <span class="nav__label">DIFC, Dubai</span>
+      <a href="mailto:reserve@noor.ae" class="nav__reserve" data-cursor-magnetic data-power="0.3">Reserve</a>
+    </nav>
+    <div class="hero__content">
+      <h1 class="hero__mark">NOOR</h1>
+      <p class="hero__sub">A twelve-course evening<br>guided by the lunar calendar</p>
     </div>
   </section>
 
-  <!-- SILENCE: 10vh gap — the pause before the room -->
-  <div class="silence" aria-hidden="true"></div>
-
-  <!-- S2: THE ROOM — 19:45 -->
-  <section class="s s--room">
-    <div class="s--room__image-wrap">
-      <img src="/assets/atmosphere-01.png" alt="" class="s--room__image" data-breathe data-breathe-duration="12" data-breathe-scale="1.03">
-    </div>
-    <div class="s--room__overlay">
-      <p class="room__line" data-word-reveal="clip">Raw concrete.</p>
-      <p class="room__line" data-word-reveal="clip">Black granite.</p>
-      <p class="room__line" data-word-reveal="clip">One candle.</p>
+  <!-- PHILOSOPHY: Light section — contrast break -->
+  <section class="philosophy">
+    <div class="philosophy__inner">
+      <span class="philosophy__eyebrow">The Philosophy</span>
+      <h2 class="philosophy__headline" data-word-reveal="clip">There is no menu.<br>The kitchen decides.</h2>
+      <p class="philosophy__body">Each new moon, a new sequence. Twelve courses built from ancestral Emirati ingredients — camel milk, dried lime, saffron — prepared with the precision of Nordic technique. You do not choose. You surrender.</p>
     </div>
   </section>
 
-  <!-- S3: THE SURRENDER — 20:00 -->
-  <section class="s s--surrender">
-    <div class="s__content s__content--center">
-      <h2 class="manifesto" data-word-reveal="clip">There is no menu.</h2>
-      <p class="manifesto__sub">The kitchen decides.</p>
+  <!-- THE ROOM: Full-bleed immersion — back to dark -->
+  <section class="room">
+    <div class="room__media">
+      <img src="/assets/room-02.png" alt="" class="room__img" data-breathe data-breathe-duration="12">
+    </div>
+    <div class="room__gradient"></div>
+    <div class="room__content">
+      <div class="room__stats">
+        <div class="room__stat">
+          <span class="stat__number">42</span>
+          <span class="stat__label">Seats</span>
+        </div>
+        <div class="room__stat">
+          <span class="stat__number">12</span>
+          <span class="stat__label">Courses</span>
+        </div>
+        <div class="room__stat">
+          <span class="stat__number">1</span>
+          <span class="stat__label">Candle per table</span>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- S4: THE SHIFT — 20:47 -->
-  <section class="s s--shift">
-    <div class="s--shift__pin">
-      <p class="shift__line" data-word-reveal="clip">The light overhead</p>
-      <p class="shift__line" data-word-reveal="clip">moves from gold to rose.</p>
+  <!-- THE SPACE: Material details — editorial layout -->
+  <section class="space">
+    <div class="space__inner">
+      <div class="space__text">
+        <span class="space__eyebrow">The Space</span>
+        <h2 class="space__headline">A former<br>jewelry vault</h2>
+        <p class="space__body">Gate Village, DIFC. Raw concrete walls. Terrazzo floors. Fourteen-foot ceilings. No tablecloths — plates rest on polished black granite slabs. The only decoration is light itself.</p>
+      </div>
+      <div class="space__image-wrap">
+        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=85&auto=format&fit=crop" alt="" class="space__image" data-breathe data-breathe-duration="10">
+      </div>
     </div>
   </section>
 
-  <!-- S5: THE CRAFT — 21:15 -->
-  <section class="s s--craft">
-    <div class="s--craft__image-wrap">
-      <img src="/assets/atmosphere-02.png" alt="" class="s--craft__image" data-breathe data-breathe-duration="10" data-breathe-scale="1.025">
-    </div>
-    <div class="s--craft__overlay">
-      <p class="craft__line">Dried lime from Ras Al Khaimah.</p>
-      <p class="craft__line">Saffron harvested at dawn.</p>
-      <p class="craft__line">Camel milk from Al Ain.</p>
-    </div>
-  </section>
-
-  <!-- S6: THE SILENCE — 22:30 -->
-  <section class="s s--tea">
-    <div class="s__content s__content--center">
-      <p class="tea__word">Tea.</p>
+  <!-- THE LIGHT: Pinned scroll section — the signature element -->
+  <section class="light">
+    <div class="light__pin">
+      <div class="light__bg" id="lightBg"></div>
+      <div class="light__content">
+        <span class="light__eyebrow">The Installation</span>
+        <h2 class="light__headline" id="lightHeadline">The light overhead shifts<br>from gold to rose</h2>
+        <p class="light__credit">Ceiling installation by Shaikha Al Mazrou</p>
+      </div>
     </div>
   </section>
 
-  <!-- S7: THE DEPARTURE — 23:15 -->
-  <section class="s s--departure">
-    <div class="s__content s__content--center s__content--footer">
-      <span class="footer__mark" data-word-reveal="clip">N<span class="wt-heavy">OOR</span></span>
-      <span class="footer__location">DIFC, Dubai</span>
-      <a href="mailto:reserve@noor.ae" class="footer__reserve" data-cursor-magnetic data-power="0.35">reserve@noor.ae</a>
+  <!-- INGREDIENTS: Horizontal list on dark -->
+  <section class="ingredients">
+    <div class="ingredients__inner">
+      <span class="ingredients__eyebrow">The Ingredients</span>
+      <div class="ingredients__list">
+        <div class="ingredient">
+          <span class="ingredient__origin">Ras Al Khaimah</span>
+          <span class="ingredient__name">Dried Lime</span>
+        </div>
+        <div class="ingredient__divider"></div>
+        <div class="ingredient">
+          <span class="ingredient__origin">Hatta</span>
+          <span class="ingredient__name">Saffron</span>
+        </div>
+        <div class="ingredient__divider"></div>
+        <div class="ingredient">
+          <span class="ingredient__origin">Al Ain</span>
+          <span class="ingredient__name">Camel Milk</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRESS: Social proof -->
+  <section class="press">
+    <div class="press__inner">
+      <span class="press__star">★</span>
+      <p class="press__quote">"The most extraordinary dining experience in Dubai."</p>
+      <span class="press__source">— Condé Nast Traveller</span>
+      <div class="press__logos">
+        <span>The National</span>
+        <span>TimeOut Dubai</span>
+        <span>Michelin Guide</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER: The close -->
+  <section class="footer">
+    <div class="footer__inner">
+      <h2 class="footer__mark">N<span class="wt-heavy">OOR</span></h2>
+      <div class="footer__details">
+        <p>Gate Village, DIFC<br>Dubai, UAE</p>
+        <p>Dinner service: 7:30pm — 11:15pm<br>Reservations required</p>
+      </div>
+      <a href="mailto:reserve@noor.ae" class="footer__cta" data-cursor-magnetic data-power="0.35">reserve@noor.ae</a>
     </div>
   </section>
 
