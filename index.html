@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Noor — DIFC, Dubai</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -9,109 +9,90 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
 </head>
-<body>
-  <!-- Custom cursor -->
-  <div class="cursor"></div>
-  <div class="cursor__dot"></div>
-  <div class="cursor__label"></div>
+<body data-grain>
 
-  <!-- Scroll progress -->
-  <div id="scroll-progress"></div>
+  <!-- P30 cursor — no HTML needed, canvas created by JS -->
 
   <!-- Preloader -->
   <div id="preloader">
     <div class="preloader__inner">
       <span class="preloader__wordmark">NOOR</span>
-      <span class="preloader__location">DIFC, Dubai</span>
+      <span class="preloader__sub">An evening in twelve courses</span>
       <div class="preloader__bar"><div class="preloader__fill"></div></div>
     </div>
-    <span class="preloader__line">An evening in twelve courses</span>
   </div>
 
-  <!-- Grain overlay -->
-  <canvas id="grain"></canvas>
-
-  <!-- Time display -->
-  <div id="time-display">
+  <!-- Time display (persistent) -->
+  <div id="time-display" aria-hidden="true">
     <span class="time__hours">19</span><span class="time__colon">:</span><span class="time__minutes">30</span>
   </div>
 
-  <!-- Main scroll container -->
-  <main id="scroll-wrap">
+  <!-- S1: THE APPROACH — 19:30 -->
+  <section class="s s--approach">
+    <div class="s__content s__content--left">
+      <p class="approach__line" data-word-reveal="clip">Gate Village.</p>
+      <p class="approach__line approach__line--delay" data-word-reveal="clip">The vault door is open.</p>
+    </div>
+  </section>
 
-    <!-- S1: The Approach — 7:30pm -->
-    <section class="section section--approach" data-time="19:30">
-      <div class="section__content">
-        <p class="text--whisper">Gate Village.</p>
-        <p class="text--whisper text--delay">The vault door is open.</p>
-      </div>
-    </section>
+  <!-- SILENCE: 10vh gap — the pause before the room -->
+  <div class="silence" aria-hidden="true"></div>
 
-    <!-- S2: The Room — 7:45pm -->
-    <section class="section section--room" data-time="19:45">
-      <div class="section__image-wrap">
-        <img src="/assets/atmosphere-01.png" alt="" class="section__image" data-breathe data-breathe-duration="9">
-      </div>
-      <div class="section__content section__content--overlay">
-        <p class="text--material">Raw concrete.</p>
-        <div class="section__divider"></div>
-        <p class="text--material">Black granite.</p>
-        <div class="section__divider"></div>
-        <p class="text--material">One candle.</p>
-      </div>
-    </section>
+  <!-- S2: THE ROOM — 19:45 -->
+  <section class="s s--room">
+    <div class="s--room__image-wrap">
+      <img src="/assets/atmosphere-01.png" alt="" class="s--room__image" data-breathe data-breathe-duration="12" data-breathe-scale="1.03">
+    </div>
+    <div class="s--room__overlay">
+      <p class="room__line" data-word-reveal="clip">Raw concrete.</p>
+      <p class="room__line" data-word-reveal="clip">Black granite.</p>
+      <p class="room__line" data-word-reveal="clip">One candle.</p>
+    </div>
+  </section>
 
-    <!-- S3: The First Course — 8:00pm -->
-    <section class="section section--surrender" data-time="20:00">
-      <div class="section__content section__content--full">
-        <h2 class="text--manifesto">
-          <span class="word">There</span>
-          <span class="word">is</span>
-          <span class="word">no</span>
-          <span class="word"><em>menu.</em></span>
-        </h2>
-        <p class="text--sub">The kitchen decides.</p>
-      </div>
-    </section>
+  <!-- S3: THE SURRENDER — 20:00 -->
+  <section class="s s--surrender">
+    <div class="s__content s__content--center">
+      <h2 class="manifesto" data-word-reveal="clip">There is no menu.</h2>
+      <p class="manifesto__sub">The kitchen decides.</p>
+    </div>
+  </section>
 
-    <!-- S4: The Shift — 8:47pm -->
-    <section class="section section--shift" data-time="20:47">
-      <div class="shift__glow"></div>
-      <div class="section__content section__content--full">
-        <p class="text--breath">The light overhead</p>
-        <p class="text--breath">moves from <em class="gold">gold</em> to <em class="rose">rose.</em></p>
-      </div>
-    </section>
+  <!-- S4: THE SHIFT — 20:47 -->
+  <section class="s s--shift">
+    <div class="s--shift__pin">
+      <p class="shift__line" data-word-reveal="clip">The light overhead</p>
+      <p class="shift__line" data-word-reveal="clip">moves from gold to rose.</p>
+    </div>
+  </section>
 
-    <!-- S5: The Craft — 9:15pm -->
-    <section class="section section--craft" data-time="21:15">
-      <div class="section__image-wrap">
-        <img src="/assets/atmosphere-02.png" alt="" class="section__image" data-breathe data-breathe-duration="8">
-      </div>
-      <div class="section__content section__content--overlay">
-        <p class="text--ingredient">Dried lime from Ras Al Khaimah.</p>
-        <p class="text--ingredient">Saffron harvested at dawn.</p>
-        <p class="text--ingredient">Camel milk from Al Ain.</p>
-      </div>
-    </section>
+  <!-- S5: THE CRAFT — 21:15 -->
+  <section class="s s--craft">
+    <div class="s--craft__image-wrap">
+      <img src="/assets/atmosphere-02.png" alt="" class="s--craft__image" data-breathe data-breathe-duration="10" data-breathe-scale="1.025">
+    </div>
+    <div class="s--craft__overlay">
+      <p class="craft__line">Dried lime from Ras Al Khaimah.</p>
+      <p class="craft__line">Saffron harvested at dawn.</p>
+      <p class="craft__line">Camel milk from Al Ain.</p>
+    </div>
+  </section>
 
-    <!-- S6: The Silence — 10:30pm -->
-    <section class="section section--silence" data-time="22:30">
-      <div class="section__content section__content--full">
-        <p class="text--tea">Tea.</p>
-      </div>
-    </section>
+  <!-- S6: THE SILENCE — 22:30 -->
+  <section class="s s--tea">
+    <div class="s__content s__content--center">
+      <p class="tea__word">Tea.</p>
+    </div>
+  </section>
 
-    <!-- S7: The Departure — 11:15pm -->
-    <section class="section section--departure" data-time="23:15">
-      <div class="section__content section__content--full section__content--footer">
-        <span class="footer__wordmark">N<span class="wt-heavy">OOR</span></span>
-        <span class="footer__location">DIFC, Dubai</span>
-        <a href="mailto:reserve@noor.ae" class="footer__reserve" data-cursor-magnetic data-power="0.3">reserve@noor.ae</a>
-      </div>
-    </section>
-
-  </main>
+  <!-- S7: THE DEPARTURE — 23:15 -->
+  <section class="s s--departure">
+    <div class="s__content s__content--center s__content--footer">
+      <span class="footer__mark" data-word-reveal="clip">N<span class="wt-heavy">OOR</span></span>
+      <span class="footer__location">DIFC, Dubai</span>
+      <a href="mailto:reserve@noor.ae" class="footer__reserve" data-cursor-magnetic data-power="0.35">reserve@noor.ae</a>
+    </div>
+  </section>
 
   <script type="module" src="/main.js"></script>
 </body>
